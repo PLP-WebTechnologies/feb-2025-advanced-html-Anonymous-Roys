@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML5 Elements Showcase</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f4f6f7;
+            --text-color: #333;
+            --border-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        main > section {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* List Styling */
+        ol {
+            padding-left: 30px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: var(--border-radius);
+        }
+
+        ol li {
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        ol li:hover {
+            transform: translateX(10px);
+            color: var(--primary-color);
+        }
+
+        /* Image Styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+        }
+
+        thead {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #e6e6e6;
+        }
+
+        /* Form Styling */
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        fieldset {
+            border: 2px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            padding: 20px;
+        }
+
+        legend {
+            padding: 0 10px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        input[type="checkbox"], 
+        input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        button[type="reset"] {
+            background-color: var(--secondary-color);
+        }
+
+        button[type="reset"]:hover {
+            background-color: #27ae60;
+        }
+
+        /* Multimedia Styling */
+        audio, video {
+            width: 100%;
+            border-radius: var(--border-radius);
+            margin-top: 15px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: var(--border-radius);
+        }
+        #emailComm{
+            display: inline;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main > section {
+                padding: 15px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            input, select, button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Advanced HTML5 Elements Demonstration</h1>
+    </header>
+
+    <main>
+        <!-- Ordered List with Roman Numerals -->
+        <section>
+            <h2>Learning Objectives</h2>
+            <ol type="i">
+                <li>Implement HTML5 semantic elements</li>
+                <li>Create complex forms with validation</li>
+                <li>Utilize multimedia and advanced input types</li>
+                <li>Demonstrate responsive web design principles</li>
+                <li>Explore HTML5 capabilities</li>
+            </ol>
+        </section>
+
+        <!-- External Image from Pexels -->
+        <section>
+            <h2>Featured Image</h2>
+            <img src="https://images.pexels.com/photos/7089494/pexels-photo-7089494.jpeg" 
+                 alt="Technology and Coding Workspace" 
+                 width="600" 
+                 height="400">
+        </section>
+
+        <!-- Contacts Table -->
+        <section>
+            <h2>Contact Directory</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JArhin David</td>
+                        <td>1123 Tarkwa, GH</td>
+                        <td>+233 (555) 123-4567</td>
+                        <td>davidarhin2005@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>456 Innovation Road, New York, NY</td>
+                        <td>+1 (555) 987-6543</td>
+                        <td>jane.smith@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Mike Johnson</td>
+                        <td>789 Code Street, Seattle, WA</td>
+                        <td>+1 (555) 246-8135</td>
+                        <td>mike.johnson@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Emily Brown</td>
+                        <td>321 Web Avenue, Austin, TX</td>
+                        <td>+1 (555) 369-2580</td>
+                        <td>emily.brown@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Alex Lee</td>
+                        <td>654 Design Boulevard, Chicago, IL</td>
+                        <td>+1 (555) 741-9630</td>
+                        <td>alex.lee@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Registration Form -->
+        <section>
+            <h2>User Registration</h2>
+            <form id="registrationForm" action="#" method="post">
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" 
+                           id="fullName" 
+                           name="fullName" 
+                           placeholder="Enter your full name" 
+                           required 
+                           minlength="2" 
+                           maxlength="50">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" 
+                           id="email" 
+                           name="email" 
+                           placeholder="your.email@example.com" 
+                           required 
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" 
+                           id="password" 
+                           name="password" 
+                           placeholder="Enter your password" 
+                           required 
+                           minlength="8" 
+                           maxlength="20">
+                    
+                    <label for="birthdate">Date of Birth:</label>
+                    <input type="date" 
+                           id="birthdate" 
+                           name="birthdate" 
+                           required>
+                </fieldset>
+
+                <!-- Additional Information -->
+                <fieldset>
+                    <legend>Additional Details</legend>
+                    
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="us">Ghana</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="au">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                    
+                    <label>Preferred Communication:</label>
+                    <div>
+                        <div style="display: flex;">
+
+                            <input type="radio" id="emailComm" name="communication" value="email" required>
+                            <label for="emailComm">Email</label>
+                        </div>
+                        <div style="display: flex;">
+
+                            <input type="radio" id="phoneComm" name="communication" value="phone">
+                            <label for="phoneComm">Phone</label>
+                        </div>
+                        
+                        <div style="display: flex;">
+
+                            <input type="radio" id="mailComm" name="communication" value="mail">
+                            <label for="mailComm">Mail</label>
+                        </div>
+                    </div>
+                    
+                    <label>Interests:</label>
+                    <div>
+                        <div style="display: flex;">
+
+                            <input type="checkbox" id="tech" name="interests" value="technology">
+                            <label for="tech">Technology</label>
+                        </div>
+
+                        <div style="display: flex;">  
+                            <input type="checkbox" id="design" name="interests" value="design">
+                            <label for="design">Design</label>
+                        </div>
+                        
+                        <div style="display: flex;">
+                            <input type="checkbox" id="marketing" name="interests" value="marketing">
+                            <label for="marketing">Marketing</label>
+                        </div>
+
+                        <div style="display: flex;">               
+                            <input type="checkbox" id="education" name="interests" value="education">
+                            <label for="education">Education</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Register</button>
+                <button type="reset">Reset Form</button>
+            </form>
+        </section>
+
+        <!-- Multimedia Elements -->
+        <section>
+            <h2>Multimedia Showcase</h2>
+            
+            <audio controls>
+                <source src="/Hillsong_Worship_-_Thank_You_Jesus_CeeNaija.com_.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <video controls width="600">
+                <source src="/m.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Advanced HTML5 Learning Project</p>
+    </footer>
+</body>
+</html>
